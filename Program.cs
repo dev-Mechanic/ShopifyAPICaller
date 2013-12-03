@@ -12,10 +12,13 @@ namespace ShopifyOrdersPoller
     {
         static void Main(string[] args)
         {
-            //TEST URL
+            //UPDATE URL
+            //UPDATE API KEY, PASSWORD & SHOPNAME
             string url = "https://APIKEY:APIPASSWORD@SHOPNAME.myshopify.com/admin/orders.xml";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.ContentType = "application/xml";
+
+            //UPDATE API PASSWORD
             request.Headers.Add("X-Shopify-Access-Token", "API PASSWORD");
             request.Method = "GET";
 
