@@ -12,10 +12,11 @@ namespace ShopifyOrdersPoller
     {
         static void Main(string[] args)
         {
-            string url = "https://50c917650927c24546fa5414661f00c5:5f163f48cec88d8002755f1eb26195d8@ozpacktest-2.myshopify.com/admin/orders.xml";
+            //TEST URL
+            string url = "https://APIKEY:APIPASSWORD@SHOPNAME.myshopify.com/admin/orders.xml";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.ContentType = "application/xml";
-            request.Headers.Add("X-Shopify-Access-Token", "5f163f48cec88d8002755f1eb26195d8");
+            request.Headers.Add("X-Shopify-Access-Token", "API PASSWORD");
             request.Method = "GET";
 
 
